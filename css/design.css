@@ -1,0 +1,243 @@
+/* Inspiration:  https://www.craftrestaurant.com*/
+/* Actual Restaurant: https://www.purple-roots.com*/
+
+@charset "UTF-8";
+
+/* Body ----------------------------------------------- */
+html {
+	scroll-behavior: smooth;
+	font-family: 'Montserrat';
+}
+body {
+	margin: 0px;
+	background-image: linear-gradient(#eeeeee, #d1d1d1);
+}
+main {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: 110vh;
+	background-color: white;
+}
+footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: 220px;
+	background-color: #1f1f1f;
+	color: white;
+}
+
+
+/* Containers ------------------------------------------- */
+.container {
+	display: flex;
+}
+.container-nav {
+	justify-content: stretch;
+}
+.container-grid {
+	display: grid;
+	grid-gap: 12px;
+}
+.container-about {
+	flex-wrap: nowrap;
+	justify-content: stretch;
+	flex-direction: row;
+}
+.contianer-vert {
+	align-items: center;
+}
+.container-footer {
+	justify-content: space-between;
+}
+.container-food {
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+/* Navigation ------------------------------------------- */
+.navbar {
+	height: 110px;
+	font-size: 1.1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: white;
+	text-decoration: none;
+	background-color: #1f1f1f;
+}
+.Logo {
+	height: 300px;
+}
+.navsection {
+	width: 50%;
+	height: 110px;
+}
+.navlogo {
+	display: flex;
+	margin-left: 20px;
+	justify-content: flex-start;
+	align-items: center;
+}
+.navoption {
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navoption a {
+	color: white;
+	text-decoration: none;
+	transition: 0.2s;
+}
+.navoption a:hover {
+	color: #9e005d;
+	text-decoration: none;
+}
+/* Flex + Grid Designs -------------------------------------------- */
+
+.form-grid {
+    grid-template-rows: 25% 10% 10% 10% 10% 10% 12%;
+    grid-template-columns: 1fr 1fr;
+	grid-template-areas: 	"a a"
+							"b c"
+							"d e"
+							"f g"
+							"h i"
+							"j k"
+							"l l";
+}
+.form-grid2 {
+    grid-template-rows: 15% 10% 10% 10% 10% 10% 12%;
+    grid-template-columns: 1fr 1fr;
+	grid-template-areas: 	"a a"
+							"b c"
+							"d e"
+							"f g"
+							"h i"
+							"j k"
+							"l l";
+}
+#form-a {grid-area: a;}
+#form-b {grid-area: b;}
+#form-c {grid-area: c;}
+#form-d {grid-area: d;}
+#form-e {grid-area: e;}
+#form-f {grid-area: f;}
+#form-g {grid-area: g;}
+#form-h {grid-area: h;}
+#form-i {grid-area: i;}
+#form-j {grid-area: j;}
+#form-k {grid-area: k;}
+#form-l {grid-area: l;}
+
+/* Styles + Designs ---------------------------------------- */
+.purple {
+	color: #9e005d;
+}
+.main-content {
+	justify-content: center;
+	height: 100%;
+}
+.sub-content-half {
+	width: 50%;
+}
+.about-content {
+	width: 90%;
+	font-size: 5px;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.form {
+	width: 70%;
+	padding: 30px;
+}
+.email {
+	color: #1f1f1f;
+	text-decoration: none;
+	transition: 0.4s;
+}
+.email:hover {
+	color: #9e005d;
+}
+#mailing-info {
+	width: 80%; 
+	text-align: justify; 
+	letter-spacing: 2px; 
+	padding-bottom: 30px;
+
+}
+.subscribe {
+	background-color: #9e005d;
+	color: white;
+	border-radius: 10px;
+	border: 0;
+	padding: 10px;
+	font-weight: bolder;
+	width: 80%;
+	transition: 0.3s;
+}
+.subscribe:hover {
+	background-color: #420529;
+}
+.subscribe:active {
+	background-color: #d30f82;
+}
+.currency-wrap {
+	position:relative;
+}
+.currency-code {
+	position:absolute;
+	left:8px;
+	top:10px;
+}
+.food-pic {
+	max-height: 200px;
+	width: auto;
+}
+.form-rounded{
+	padding:10px 20px;
+	border:solid 1px #ccc;
+	border-radius:5px;
+}
+.flex-container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: stretch;
+}
+.flex-container > div {
+	margin: 5px;
+}
+.info {
+	padding: 20px;
+}
+.footer-padding {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 20px;
+}
+
+/* Animations ----------------------------------------------- */
+.fade2 {
+	animation: fadeIn 2s;
+}
+.fade4 {
+	animation: fadeIn 4s;
+}
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/* Testing and Troubleshooting ------------------------------ */
+.red {
+	background-color: red;
+}
+.blue {
+	background-color: blue;
+}
+.green {
+	background-color: green;
+}
