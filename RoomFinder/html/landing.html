@@ -7,12 +7,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Login Page</title>
+    <title>Landing Page</title>
     <link rel="stylesheet" href="css/design.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <script src="function.js"></script>
+    <script>
+        function welcomeUser(){
+            if (localStorage.getItem("username")==null){
+                window.location.replace(index.html);
+            }
+            document.getElementById("welcomeUser").innerHTML = "<h1>Welcome, " + localStorage.getItem("username") + "!</h1>";
+        }
+    </script>
 </head>
-<body>
+<body onload="welcomeUser()">
     <header>
         <nav class="container container-nav" style="background-color: #c02b25; height: 48px;">
             <div class="container nav-option">
@@ -25,33 +32,15 @@
                 <div class="navoption"><a href="schedule.html">Schedule</a></div>
             </div>
         </nav>
-        
     </header>
     <main class="">
-        <div class="div-center" style="background-color: white; margin: 10px;">
-            
+        <div class="div-center" id="welcomeUser" style="background-color: white; margin: 10px;">
+            <h1>Welcome</h1>
         </div>
-        <div class="div-center">
-            <table class="tableForm">
-                <tr align="center">
-                    <td colspan="2"><h2>Login</h2></td>
-                </tr>
-                <tr>
-                    <td><label for="user">Username: </label></td>
-                    <td><input type="text" id="username" name="username" class="username userinfo"></td>
-                </tr>
-                <tr>
-                    <td><label for="password">Password: </label></td>
-                    <td><input type="password" id="password" name="password" class="password userinfo"></td>
-                </tr>
-                <tr align="center">
-                    <td colspan="2"><button onclick="sendUser('login')" >Login</button></td>
-                </tr>
-                <tr align="center">
-                    <td colspan="2" style="padding-top: 50px;">Don't have an account?<br><a href="register.html">Sign up here</a></td>
-                </tr>
-            </table>
-        </div>
+        <div class="div-center">This is the home page. Thank you for logging in.</div>
+        <br><br><br>
+        <div class="div-center"><img src="images/campus-photo1.jpg" width="65%"></div>
+        <br><br><br>
     </main>
     <footer>
         <hr>

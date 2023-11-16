@@ -22,6 +22,7 @@
                 <div class="navoption"><a href="index.html">Home</a></div>
                 <div class="navoption"><a href="register.html">Register</a></div>
                 <div class="navoption"><a href="login.html">Login</a></div>
+                <div class="navoption"><a href="schedule.html">Schedule</a></div>
             </div>
         </nav>
         
@@ -36,36 +37,36 @@
                     <td colspan="2"><h2>Create Your Account</h2></td>
                 </tr>
                 <tr>
-                    <td><label for="fName">First Name: </label></td>
-                    <td><input type="text" id="fName" name="fName"></td>
+                    <td><label for="firstname">First Name: </label></td>
+                    <td><input type="text" id="firstname" name="firstname" class="userinfo"></td>
                 </tr>
                 <tr>
-                    <td><label for="lName">Last Name: </label></td>
-                    <td><input type="text" id="lName" name="lName"></td>
+                    <td><label for="lastname">Last Name: </label></td>
+                    <td><input type="text" id="lastname" name="lastname" class="userinfo"></td>
                 </tr>
                 <tr>
-                    <td><label for="fName">Date of Birth: </label></td>
-                    <td ><input type="date" id="dob" name="dob" class="dob"></td>
+                    <td><label for="dob">Date of Birth: </label></td>
+                    <td ><input type="date" id="dob" name="dob" class="dob userinfo"></td>
                 </tr>
                 <tr>
                     <td><label for="email">Email: </label></td>
-                    <td><input type="text" id="email" name="email"></td>
+                    <td><input type="text" id="email" name="email" class="userinfo"></td>
                 </tr>
                 <tr>
                     <td><label for="phone">Phone Number: </label></td>
-                    <td><input type="nu" id="phone" name="phone"></td>
+                    <td><input type="nu" id="phone" name="phone" class="userinfo"></td>
                 </tr>
                 <tr><td> &nbsp; </td></tr>
                 <tr>
-                    <td><label for="user">Username: </label></td>
-                    <td><input type="text" id="user" name="user"></td>
+                    <td><label for="username">Username: </label></td>
+                    <td><input type="text" id="username" name="username" class="userinfo"></td>
                 </tr>
                 <tr>
-                    <td><label for="user">Password: </label></td>
-                    <td><input type="tel" id="password" name="password" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ></td>
+                    <td><label for="password">Password: </label></td>
+                    <td><input type="tel" id="password" name="password" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="userinfo"></td>
                 </tr>
                 <tr align="center">
-                    <td colspan="2"><button onclick="sendUser()" >Login</button></td>
+                    <td colspan="2"><button onclick="sendUser('register'); validateLogin()" >Login</button></td>
                 </tr>
             </table>
         </div>
