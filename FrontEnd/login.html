@@ -1,0 +1,65 @@
+<!--
+	Name: John Rafael De Los Reyes
+	Date: 10/26/2023
+	Course: IT490-103
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/design.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="function.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container container-nav" style="background-color: #c02b25; height: 48px;">
+            <div class="container nav-option">
+                <a href="index.html"><img src="images/logo.png" width="150" height="50" style="margin-left: 12px; margin-top: 3px;"></a>
+            </div>
+            <div class="container navsection" style="justify-content: flex-start;">
+                <div class="navoption"><a href="index.html">Home</a></div>
+                <div class="navoption"><a href="register.html">Register</a></div>
+                <div class="navoption"><a href="login.html">Login</a></div>
+                <div class="navoption"><a href="schedule.html">Schedule</a></div>
+            </div>
+        </nav>
+        
+    </header>
+    <main class="">
+        <div class="div-center" style="background-color: white; margin: 10px;">
+            
+        </div>
+        <div class="div-center">
+            <table class="tableForm">
+                <tr align="center">
+                    <td colspan="2"><h2>Login</h2></td>
+                </tr>
+                <tr>
+                    <td><label for="user">Username: </label></td>
+                    <td><input type="text" id="username" name="username" class="username userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password: </label></td>
+                    <td><input type="password" id="password" name="password" class="password userinfo"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><button onclick="sendUser('login')" >Login</button></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2" style="padding-top: 50px;">Don't have an account?<br><a href="register.html">Sign up here</a></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <div style="margin: 12px;">
+            Developed by Group 6
+            <br>
+            IT490-103: Systems Integration
+        </div>
+    </footer>
+</body>
+</html>

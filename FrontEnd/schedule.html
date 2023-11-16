@@ -1,0 +1,426 @@
+<!--
+	Name: John Rafael De Los Reyes
+	Date: 10/26/2023
+	Course: IT490-103
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Schedule Page</title>
+    <link rel="stylesheet" href="css/design.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <nav class="container container-nav" style="background-color: #c02b25; height: 48px;">
+            <div class="container nav-option">
+                <a href="index.html"><img src="images/logo.png" width="150" height="50" style="margin-left: 12px; margin-top: 3px;"></a>
+            </div>
+            <div class="container navsection" style="justify-content: flex-start;">
+                <div class="navoption"><a href="index.html">Home</a></div>
+                <div class="navoption"><a href="register.html">Register</a></div>
+                <div class="navoption"><a href="login.html">Login</a></div>
+                <div class="navoption"><a href="schedule.html">Schedule</a></div>
+            </div>
+        </nav>
+    </header>
+    <main class="">
+        <div class="div-center" style="margin: 10px;">
+            <h1>Schedule</h1>
+        </div>
+        <div class="div-center" style="width: 80%; margin: auto;" >
+            <p>
+                <label for="semester">Semester:</label>
+                    <select onchange="notReady(this)" name="semester" id="semester" class="semester" >
+                        <option value="fall2023">Fall 2023</option>
+                        <option value="spring2023">Spring 2024</option>
+                    </select>
+                    <script>
+                        function notReady(dropdown) {
+                            var x = document.getElementById("semester");
+                            if (dropdown.value == "spring2023"){
+                                alert("Not ready yet");
+                                dropdown.value = "fall2023";
+                            }
+                        }
+                    </script>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="date">Date:</label>
+                    <select name="day" id="day" class="day" >
+                        <option value="sunday">Sunday</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
+                    </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="cars">Building:</label>
+                    <select name="building" id="building" class="building" defaul>
+                        <option value="none" selected disabled>Choose Here</option>
+                        <option value="Campbell Hall">Campbell Hall</option>
+                        <option value="Campus Center">Campus Center</option>
+                        <option value="Central Ave Building">Central Ave Building</option>
+                        <option value="Central King Building">Central King Building</option>
+                        <option value="Colton Hall">Colton Hall</option>
+                        <option value="Cullimore Hall">Cullimore Hall</option>
+                        <option value="Dorman Honors Residence Hall">Dorman Honors Residence Hall</option>
+                        <option value="Electrical and Computer Engineering">Electrical and Computer Engineering</option>
+                        <option value="Faculty Memorial Hall">Faculty Memorial Hall</option>
+                        <option value="Fenster Hall">Fenster Hall</option>
+                        <option value="Guttenburg Information Technologies Center">Guttenburg Information Technologies Center</option>
+                        <option value="Kupfrian">Kupfrian</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Microelectronics Center">Microelectronics Center</option>
+                        <option value="Student Mall">Student Mall</option>
+                        <option value="Tiernan Hall">Tiernan Hall</option>
+                        <option value="Wellness and Events Center">Wellness and Events Center</option>
+                        <option value="Weston Hall">Weston Hall</option>
+                    </select>
+            </p>
+        </div>
+        <div class="div-center">
+            <!--<table class="tableSchedule">
+                <tr>
+                    <th>&nbsp;</td>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                </tr>
+                <tr class="room1">
+                    <td>Room 1</td>
+                    <td class="8am"><div class="course" style="">Course</div></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="room2">
+                    <td>Room 2</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="room3">
+                    <td>Room 3</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="room4">
+                    <td>Room 4</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr  class="room5">
+                    <td>Room 5</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="room6">
+                    <td>Room 6</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="room7">
+                    <td>Room 7</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr  class="room8">
+                    <td>Room 8</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="room9">
+                    <td>Room 9</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+            </table>-->
+            <table class="tableSchedule">
+                <tr>
+                    <th>&nbsp;</td>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                </tr>
+                <tr class="colt121">
+                    <td>COLT 121</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="colt210">
+                    <td>COLT 210</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"><div class="course" style="left: 30px;width: 120px;">CE NEXT 101</div></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="colt311">
+                    <td>COLT 331</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"><div class="course" style="left: 0px;width: 170px;">CE 320A</div></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="colt314">
+                    <td>COLT314</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"><div class="course" style="left: 0px;width: 170px;">CE 314A</div></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="colt416">
+                    <td>COLT 416</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"><div class="course" style="left: 30px;width: 80px;">CE 342</div></td>
+                    <td class="12am"></td>
+                    <td class="1pm"><div class="course" style="left: 0px;width: 80px;">CE 342</div></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"><div class="course" style="left: 0px;width: 170px;">CE 342</div></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+                <tr class="colt423">
+                    <td>COLT 423</td>
+                    <td class="8am"></td>
+                    <td class="9am"></td>
+                    <td class="10am"></td>
+                    <td class="11am"><div class="course" style="left: 30px;width: 80px;">MECH 237</div></td>
+                    <td class="12am"></td>
+                    <td class="1pm"></td>
+                    <td class="2pm"></td>
+                    <td class="3pm"></td>
+                    <td class="4pm"></td>
+                    <td class="5pm"></td>
+                    <td class="6pm"></td>
+                    <td class="7pm"></td>
+                    <td class="8pm"></td>
+                    <td class="9pm"></td>
+                    <td class="10pm"></td>
+                    <td class="11pm"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <br><br><br>
+    </main>
+    <footer>
+        <hr>
+        <div style="margin: 12px;">
+            Developed by Group 6
+            <br>
+            IT490-103: Systems Integration
+        </div>
+    </footer>
+</body>
+</html>
