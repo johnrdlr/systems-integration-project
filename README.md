@@ -103,11 +103,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contributors
 
-John Rafael De Los Reyes - jcd49@njit.edu
-Maciej Jedryczka - mj42@njit.edu
-Darian Moore - dtm36@njit.edu
-Hima Patel - hp75@njit.edu
-Bhargav Jillepalli - blj6@njit.edu
+John Rafael De Los Reyes - jcd49@njit.edu  
+Maciej Jedryczka - mj42@njit.edu  
+Darian Moore - dtm36@njit.edu  
+Hima Patel - hp75@njit.edu  
+Bhargav Jillepalli - blj6@njit.edu  
 
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
