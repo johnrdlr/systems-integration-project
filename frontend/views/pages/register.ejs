@@ -1,0 +1,77 @@
+<!--
+	Name: John Rafael De Los Reyes
+	Date: 10/26/2023
+	Course: IT490-103
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include(headFile); %>
+</head>
+
+<body>
+    <header>
+        <%- include(headerFile); %>
+    </header>
+    <main class="">
+        <div class="div-center" style="background-color: white; margin: 10px;">
+
+        </div>
+        <div class="div-center">
+            <table class="tableForm register">
+                <tr align="center">
+                    <td colspan="2">
+                        <h2>Create Your Account</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">First Name: </label><input type="text" id="fname" name="firstname" class="userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Last Name: </label><input type="text" id="lname" name="lastname" class="userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth: </label><input type="date" id="dob" name="dob" class="dob userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label><input type="text" id="email" name="email" class="userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number: </label><input type="tel" id="phone" name="phone" class="userinfo"></td>
+                </tr>
+                <tr>
+                    <td> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="question">Security Question: </label>
+                        <select name="questionSelection" id="questionSelection" class="day">
+                            <option value="none" selected disabled>Choose Here</option>
+                            <option value="Q1">What was your first high school's name?</option>
+                            <option value="Q2">What is your favorite outdoor activity?</option>
+                            <option value="Q3">Who is your first kiss?</option>
+                        </select>
+                        <input type="text" id="question" name="question" class="userinfo">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username: </label><input type="text" id="username" name="username" class="userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password: </label><input type="password" id="password" name="password" class="userinfo"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Confirm Password: </label><input type="password" id="confirmpass" name="confirmpass" class="userinfo"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><button class="registerbtn" onclick="sendUser('register')">Register</button></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <%- include("../partials/footer"); %>
+    </footer>
+</body>
+
+</html>

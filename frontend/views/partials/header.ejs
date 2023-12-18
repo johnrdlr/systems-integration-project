@@ -1,0 +1,18 @@
+<nav class="container container-nav" style="background-color: #c02b25; height: 48px;">
+    <div class="container nav-option">
+        <a id="logo" href="index"><img src="images/logo.png" width="150" height="50" style="margin-left: 12px; margin-top: 3px;"></a>
+    </div>
+    <div class="container navsection">
+        <div class="navoption"><a href="index" class="link">Home</a></div>
+        <div class="navoption"><a href="register" class="link">Register</a></div>
+        <div class="navoption"><a href="login" class="link">Login</a></div>
+        <script>
+            document.getElementById("logo").href = makeURL(document.getElementById("logo").href)
+            var links = document.getElementsByClassName("link");
+            for(var a = 0; a < links.length; a++) {
+                links[a].href = makeURL(links[a].href);
+            }
+            // document.cookie = "token=undefined";
+        </script>
+    </div>
+</nav>
