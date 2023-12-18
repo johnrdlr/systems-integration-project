@@ -1,0 +1,61 @@
+import asyncio
+import json
+import aio_pika
+from aio_pika.abc import AbstractIncomingMessage
+import os
+import random
+
+from aio_pika import Message, connect, Queue, ExchangeType
+
+servers = [
+	"amqp://backend:linuser@10.116.0.2:5672",
+	"amqp://backend:linuser@10.116.0.6:5672",
+	"amqp://backend:linuser@10.116.0.3:5672"
+]
+def getNode():
+	return servers[random.randint(0, len(servers) - 1)]
+
+async def onMessage(message: AbstractIncomingMessage) -> None:
+	async with message.process():
+		messageBody = message.body.decode("utf-8")
+		print(messageBody)
+		messJson = json.loads(messageBody)
+
+		userConnection = await connect(getNode())
+		userChannel = await userConnection.channel()
+		
+		if "Req" in messJson["action"]:
+			databaseExchange = await userChannel.declare_exchange("Database", ExchangeType.DIRECT)
+			await databaseExchange.publish(
+				Message(body=json.dumps(messJson).encode()),
+				routing_key = "Database1",
+			)
+		elif "Res" in messJson["action"] and "course" in messJson["action"]:
+			print("response: ", messJson["body"])
+		elif "Res" in messJson["action"]:
+			await userChannel.default_exchange.publish(
+				Message(body=json.dumps(messJson).encode()),
+				routing_key = messJson["userID"],
+			)
+
+		await userConnection.close()
+		await asyncio.sleep(1)
+
+
+async def main() -> None:
+	connection = await connect(getNode())
+
+	#Declare exchange and queue for this service
+	channel = await connection.channel()
+	queue = await channel.declare_queue("Backend")
+	await queue.consume(onMessage)
+
+	try:
+		await asyncio.Future()
+	finally:
+		await connection.close()
+
+
+if __name__ == "__main__":
+	os.system("python3 send_data.py")
+	asyncio.run(main())
