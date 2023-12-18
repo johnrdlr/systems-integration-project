@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include(headFile); %>
+</head>
+
+<body>
+    <header>
+        <%- include(headerFile); %>
+    </header>
+    <main class="">
+        <div class="div-center" style="background-color: white; margin: 10px;">
+            <!-- This area is for the area between the navbar and first web table.
+                For now, it is a spacer so the table and navbar dont touch. -->
+        </div>
+        <div class="div-center">
+            <table class="tableForm login">
+                <tr align="center">
+                    <td colspan="2">
+                        <h2>Account Information</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username: </label><input type="text" id="username" name="username" class="userinfo" value=<%=username %> readonly></td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">First Name: </label><input type="text" id="fname" name="firstname" class="userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Last Name: </label><input type="text" id="lname" name="lastname" class="userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth: </label><input type="date" id="dob" name="dob" class="dob userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label><input type="text" id="email" name="email" class="userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number: </label><input type="tel" id="phone" name="phone" class="userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password: </label><input type="password" id="password" name="password" class="userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="newPasswordd">New Password: </label><input type="password" id="newPassword" name="newPassword" class="userinfo"></td>
+                    <td></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><button class="registerbtn" onclick="sendUser('edit');">Save Profile</button></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="div-center">
+            <table border=0>
+                <tr align="center">
+                    <td colspan="2"><button onclick="logout();">Logout</button></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <%- include("../partials/footer"); %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* ====================== General Styles ===================== */
+html {
+	scroll-behavior: smooth;
+	font-family: 'Montserrat';
+}
+body {
+    font-family: arial, sans-serif !important;
+    font-size: 0.888em;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+main {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	min-height: 90vh;
+	background-color: white;
+}
+/* ====================== Navigation Bar Design ===================== */
+nav a{
+	color: white;
+	text-decoration: none;
+}
+.container {
+	display: flex;
+}
+.container-nav {
+	justify-content: stretch;
+}
+.navoption {
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navsection {
+	width: 100%;
+	height: 48px;
+	color: white;
+}
+.navoption:last-of-type {
+	margin-left: auto;
+	color: black;
+}
+/* ====================== DropDown Design ===================== */
+.dropbtn {
+	background-color: #c02b25;
+	color: white;
+	height: 48px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+  }
+  
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+	background-color: rgb(123, 0, 0);
+  }
+
+  .dropdown .navicon {
+	transition: all ease-in-out .25s;
+  }
+  .dropdown:hover .navicon {
+	rotate: 90deg;
+	transition: all ease-in-out .25s;
+  }
+
+/* ====================== Main Section Design ===================== */
+
+.div-center {
+	display: flex;
+	justify-content: center;
+}
+
+.tableForm{
+	border: 1px solid #000;
+	padding: 20px;
+	border-radius: 5px;;
+}
+
+.login {
+	border: none;
+	width: 70%;
+}
+
+.login label {
+	font-weight: bold;
+}
+
+.register {
+	border: none;
+	width: 70%;
+}
+
+.register label {
+	font-weight: bold;
+}
+	
+/* Set a style for the submit button */
+.registerbtn {
+	background-color: #c02b25;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.7;
+	transition: all ease-in-out .25s;
+  }
+.registerbtn:hover {
+  transition: all ease-in-out .25s;
+  opacity: 1;
+}
+
+hr {
+	border-top: 1px dotted #000;
+}
+
+input[type=text], input[type=password], input[type=tel], input[type=date]  {
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+  }
+
+/* ====================== Schedule Page Design ===================== */
+
+table.tableSchedule, .tableSchedule th,.tableSchedule tr,.tableSchedule td {
+	border-collapse: collapse;
+	border: 1px #d3d3d3 solid;
+	position: relative;
+}
+select.building {
+	width: 150px;
+}
+.tableSchedule
+{
+	width: 1060px;
+	table-layout: fixed;
+	z-index: 0;
+}
+.tableSchedule tr:nth-child(odd) { 
+	background-color: rgb(235, 235, 235) !important; 
+}
+.tableSchedule th:first-child {
+	width: 100px;;
+	border: none;
+}
+.tableSchedule th {
+	font-weight: normal;
+	width: 60px;
+}
+
+div.course {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 80px;
+	height: 16px;
+	background-color: #ec5f5a;
+	border: 1px #ffffff solid;
+	color: white;
+	overflow:hidden;
+	z-index: 1;
+}
+div.course:hover {
+	background-color: rgb(123, 0, 0);
+	color: white;
+	overflow: visible;
+	z-index: 2;
+}

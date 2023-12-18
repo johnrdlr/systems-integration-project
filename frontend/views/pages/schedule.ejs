@@ -1,0 +1,91 @@
+<!--
+	Name: John Rafael De Los Reyes
+	Date: 10/26/2023
+	Course: IT490-103
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include(headFile); %>
+</head>
+<body>
+    <header>
+        <%- include(headerFile); %>
+    </header>
+    <main class="">
+        <div class="div-center" style="margin: 10px;">
+            <h1>Schedule</h1>
+        </div>
+        <div class="div-center" style="width: 80%; margin: auto;" >
+            <p>
+                <label for="semester">Semester:</label>
+                    <select onchange="dropdownChange('semester')" name="semester" id="term" class="semester userinfo" >
+                        <option value="Spring2024">Spring 2024</option>
+                        <option value="Fall2024">Fall 2024</option>
+                    </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="date">Date:</label>
+                    <select name="day" id="date" class="day" onchange="dropdownChange('date')">
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="cars">Building:</label>
+                    <select name="building" id="building" onchange="dropdownChange('building')" class="building userinfo" defaul >
+                        <option value="none" selected disabled>Choose Here</option>
+                        <option value="CAMP">Campbell Hall</option>
+                        <!-- <option value="CC">Campus Center</option> -->
+                        <option value="CAB">Central Ave Building</option>
+                        <option value="CKB">Central King Building</option>
+                        <option value="COLT">Colton Hall</option>
+                        <option value="CULM">Cullimore Hall</option>
+                        <option value="DHRH">Dorman Honors Residence Hall</option>
+                        <option value="ECEC">Electrical and Computer Engineering</option>
+                        <option value="FMH">Faculty Memorial Hall</option>
+                        <option value="FENS">Fenster Hall</option>
+                        <option value="GITC">Guttenburg Information Technologies Center</option>
+                        <option value="KUPF">Kupfrian</option>
+                        <option value="ME">Mechanical Engineering</option>
+                        <!-- <option value="MIC">Microelectronics Center</option> -->
+                        <option value="MALL PC">Student Mall</option>
+                        <option value="TIER">Tiernan Hall</option>
+                        <option value="WEC">Wellness and Events Center</option>
+                        <option value="WEST">Weston Hall</option>
+                    </select>
+            </p>
+        </div>
+        <div class="div-center">
+            <table class="tableSchedule" id="scheduleTable">
+                <tr>
+                    <th>&nbsp;</td>
+                    <th id="widthRef">7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+            </table>
+        </div>
+        
+        <br><br><br>
+    </main>
+    <footer>
+        <%- include("../partials/footer"); %>
+    </footer>
+</body>
+</html>
